@@ -36,8 +36,8 @@ class Dashboard extends Component {
   }
 
   handleDeposit = amount => {
-    if (!amount) {
-      toast.error('Введите сумму для проведения операции!');
+    if (amount <= 0) {
+      toast.error('Введите корректную сумму для проведения операции!');
       return;
     }
     const income = {
